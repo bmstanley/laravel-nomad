@@ -36,7 +36,7 @@ class TestCase extends BaseTestCase
     {
         $pdo = new PdoStub();
 
-        return $this->app->make('db.connection.' . $type, [$pdo, 'database']);
+        return $this->app->make('db.connection.' . $type, array($pdo, 'database'));
     }
 
     public function getNewBlueprint($table = 'table')
@@ -46,15 +46,15 @@ class TestCase extends BaseTestCase
 
     public function getBuilderBlueprint(Builder $builder, $table = 'table')
     {
-        return $this->callRestrictedMethod($builder, 'createBlueprint', [$table]);
+        return $this->callRestrictedMethod($builder, 'createBlueprint', array($table));
     }
 
     public function getColumnSql(Grammar $grammer, Blueprint $blueprint)
     {
-        return $this->callRestrictedMethod($grammer, 'getColumns', [$blueprint]);
+        return $this->callRestrictedMethod($grammer, 'getColumns', array($blueprint));
     }
 
-    public function callRestrictedMethod($object, $method, array $args = [])
+    public function callRestrictedMethod($object, $method, array $args = array())
     {
         $reflectionMethod = new ReflectionMethod($object, $method);
         $reflectionMethod->setAccessible(true);
