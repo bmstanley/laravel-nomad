@@ -15,8 +15,19 @@ class TestCase extends BaseTestCase
     public function createApplication()
     {
         $app = new Application();
-        $app->register(\Illuminate\Database\DatabaseServiceProvider::class);
-        $app->register(\ShiftOneLabs\LaravelNomad\LaravelNomadServiceProvider::class);
+
+        $app['env'] = $env = 'testing';
+
+        $app->bindInstallPaths(array(
+            'app' => __DIR__ . '/../src',
+            'base' => __DIR__ . '/..',
+        ));
+
+        $app->instance('app', $app);
+        $app->instance('config', $config = new \Illuminate\Config\Repository($app->getConfigLoader(), $env));
+
+        $app->register('\Illuminate\Database\DatabaseServiceProvider');
+        $app->register('\ShiftOneLabs\LaravelNomad\LaravelNomadServiceProvider');
 
         return $app;
     }
