@@ -1,17 +1,20 @@
 <?php
+
 namespace ShiftOneLabs\LaravelNomad\Tests;
 
 use ReflectionMethod;
+use Illuminate\Database\Connection;
 use Illuminate\Foundation\Application;
 use Illuminate\Database\Schema\Builder;
+use ShiftOneLabs\LaravelNomad\FeatureDetection;
 use ShiftOneLabs\LaravelNomad\Tests\Stubs\PdoStub;
+use Illuminate\Database\Connectors\ConnectionFactory;
 use Illuminate\Database\Schema\Blueprint as Blueprint;
 use Illuminate\Database\Schema\Grammars\Grammar as Grammar;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 
 class TestCase extends BaseTestCase
 {
-
     public function createApplication()
     {
         $app = new Application();
@@ -29,14 +32,21 @@ class TestCase extends BaseTestCase
         $app->register('\Illuminate\Database\DatabaseServiceProvider');
         $app->register('\ShiftOneLabs\LaravelNomad\LaravelNomadServiceProvider');
 
+        $this->detection = $app['nomad.feature.detection'];
+
         return $app;
     }
 
     public function makeConnection($type)
     {
-        $pdo = new PdoStub();
+        if ($this->detection->isConnectionResolver(FeatureDetection::CONNECTION_RESOLVER_METHOD)) {
+            return $this->app->make('Illuminate\Database\Connectors\ConnectionFactory')->make([
+                'driver' => $type,
+                'database' => 'database',
+            ]);
+        }
 
-        return $this->app->make('db.connection.' . $type, array($pdo, 'database'));
+        return $this->app->make('db.connection.' . $type, [new PdoStub(), 'database']);
     }
 
     public function getNewBlueprint($table = 'table')
