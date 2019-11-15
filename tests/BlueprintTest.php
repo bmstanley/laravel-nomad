@@ -11,7 +11,7 @@ class BlueprintTest extends TestCase
         $builder = $conn->getSchemaBuilder();
         $blueprint = $this->getBuilderBlueprint($builder);
 
-        $this->assertInstanceOf('ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Blueprint', $blueprint);
+        $this->assertInstanceOf('Bmstanley\LaravelNomad\Extension\Database\Schema\Blueprint', $blueprint);
     }
 
     public function testPgsqlConnectionSchemaBuilderBlueprintIsOverridden()
@@ -20,7 +20,7 @@ class BlueprintTest extends TestCase
         $builder = $conn->getSchemaBuilder();
         $blueprint = $this->getBuilderBlueprint($builder);
 
-        $this->assertInstanceOf('ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Blueprint', $blueprint);
+        $this->assertInstanceOf('Bmstanley\LaravelNomad\Extension\Database\Schema\Blueprint', $blueprint);
     }
 
     public function testSqliteConnectionSchemaBuilderBlueprintIsOverridden()
@@ -29,7 +29,7 @@ class BlueprintTest extends TestCase
         $builder = $conn->getSchemaBuilder();
         $blueprint = $this->getBuilderBlueprint($builder);
 
-        $this->assertInstanceOf('ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Blueprint', $blueprint);
+        $this->assertInstanceOf('Bmstanley\LaravelNomad\Extension\Database\Schema\Blueprint', $blueprint);
     }
 
     public function testSqlsrvConnectionSchemaBuilderBlueprintIsOverridden()
@@ -38,7 +38,7 @@ class BlueprintTest extends TestCase
         $builder = $conn->getSchemaBuilder();
         $blueprint = $this->getBuilderBlueprint($builder);
 
-        $this->assertInstanceOf('ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Blueprint', $blueprint);
+        $this->assertInstanceOf('Bmstanley\LaravelNomad\Extension\Database\Schema\Blueprint', $blueprint);
     }
 
     public function testBlueprintPassthruColumnTypeIsPassthru()

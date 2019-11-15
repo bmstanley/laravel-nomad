@@ -3,7 +3,7 @@
 namespace Bmstanley\LaravelNomad\Tests;
 
 use PHPUnit_Framework_TestCase;
-use ShiftOneLabs\LaravelNomad\FeatureDetection;
+use Bmstanley\LaravelNomad\FeatureDetection;
 
 class FeatureDetectionTest extends PHPUnit_Framework_TestCase
 {

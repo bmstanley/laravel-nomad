@@ -2,9 +2,9 @@
 
 namespace Bmstanley\LaravelNomad\Extension\Database;
 
-use ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Blueprint;
+use Bmstanley\LaravelNomad\Extension\Database\Schema\Blueprint;
 use Illuminate\Database\SqlServerConnection as BaseSqlServerConnection;
-use ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Grammars\SqlServerGrammar as SchemaGrammar;
+use Bmstanley\LaravelNomad\Extension\Database\Schema\Grammars\SqlServerGrammar as SchemaGrammar;
 
 class SqlServerConnection extends BaseSqlServerConnection
 {
@@ -12,7 +12,7 @@ class SqlServerConnection extends BaseSqlServerConnection
     /**
      * Get the default schema grammar instance.
      *
-     * @return \ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Grammars\SqlServerGrammar
+     * @return \Bmstanley\LaravelNomad\Extension\Database\Schema\Grammars\SqlServerGrammar
      */
     protected function getDefaultSchemaGrammar()
     {

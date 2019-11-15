@@ -9,27 +9,27 @@ class ConnectionTest extends TestCase
     {
         $conn = $this->makeConnection('mysql');
 
-        $this->assertInstanceOf('ShiftOneLabs\LaravelNomad\Extension\Database\MySqlConnection', $conn);
+        $this->assertInstanceOf('Bmstanley\LaravelNomad\Extension\Database\MySqlConnection', $conn);
     }
 
     public function testPgsqlConnectionIsOverridden()
     {
         $conn = $this->makeConnection('pgsql');
 
-        $this->assertInstanceOf('ShiftOneLabs\LaravelNomad\Extension\Database\PostgresConnection', $conn);
+        $this->assertInstanceOf('Bmstanley\LaravelNomad\Extension\Database\PostgresConnection', $conn);
     }
 
     public function testSqliteConnectionIsOverridden()
     {
         $conn = $this->makeConnection('sqlite');
 
-        $this->assertInstanceOf('ShiftOneLabs\LaravelNomad\Extension\Database\SQLiteConnection', $conn);
+        $this->assertInstanceOf('Bmstanley\LaravelNomad\Extension\Database\SQLiteConnection', $conn);
     }
 
     public function testSqlsrvConnectionIsOverridden()
     {
         $conn = $this->makeConnection('sqlsrv');
 
-        $this->assertInstanceOf('ShiftOneLabs\LaravelNomad\Extension\Database\SqlServerConnection', $conn);
+        $this->assertInstanceOf('Bmstanley\LaravelNomad\Extension\Database\SqlServerConnection', $conn);
     }
 }

@@ -14,10 +14,10 @@ class LaravelNomadServiceProvider extends ServiceProvider
      * @var array
      */
     protected $classes = [
-        'mysql' => 'ShiftOneLabs\LaravelNomad\Extension\Database\MySqlConnection',
-        'pgsql' => 'ShiftOneLabs\LaravelNomad\Extension\Database\PostgresConnection',
-        'sqlite' => 'ShiftOneLabs\LaravelNomad\Extension\Database\SQLiteConnection',
-        'sqlsrv' => 'ShiftOneLabs\LaravelNomad\Extension\Database\SqlServerConnection',
+        'mysql' => 'Bmstanley\LaravelNomad\Extension\Database\MySqlConnection',
+        'pgsql' => 'Bmstanley\LaravelNomad\Extension\Database\PostgresConnection',
+        'sqlite' => 'Bmstanley\LaravelNomad\Extension\Database\SQLiteConnection',
+        'sqlsrv' => 'Bmstanley\LaravelNomad\Extension\Database\SqlServerConnection',
     ];
 
     /**
@@ -39,7 +39,7 @@ class LaravelNomadServiceProvider extends ServiceProvider
      */
     public function registerFeatureDetection()
     {
-        $this->app->singleton('nomad.feature.detection', 'ShiftOneLabs\LaravelNomad\FeatureDetection');
+        $this->app->singleton('nomad.feature.detection', 'Bmstanley\LaravelNomad\FeatureDetection');
     }
 
     /**

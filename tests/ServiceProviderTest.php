@@ -3,7 +3,7 @@
 namespace Bmstanley\LaravelNomad\Tests;
 
 use Illuminate\Database\Connection;
-use ShiftOneLabs\LaravelNomad\FeatureDetection;
+use Bmstanley\LaravelNomad\FeatureDetection;
 
 class ServiceProviderTest extends TestCase
 {
@@ -23,7 +23,7 @@ class ServiceProviderTest extends TestCase
 
         $this->setExpectedException('LogicException');
 
-        (new \ShiftOneLabs\LaravelNomad\LaravelNomadServiceProvider($this->app))->registerConnections();
+        (new \Bmstanley\LaravelNomad\LaravelNomadServiceProvider($this->app))->registerConnections();
     }
 
     public function testMysqlConnectionRegistered()

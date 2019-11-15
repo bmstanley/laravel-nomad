@@ -11,7 +11,7 @@ class SchemaGrammarTest extends TestCase
         $conn->useDefaultSchemaGrammar();
         $grammar = $conn->getSchemaGrammar();
 
-        $this->assertInstanceOf('ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Grammars\MySqlGrammar', $grammar);
+        $this->assertInstanceOf('Bmstanley\LaravelNomad\Extension\Database\Schema\Grammars\MySqlGrammar', $grammar);
     }
 
     public function testPgsqlConnectionSchemaGrammarIsOverridden()
@@ -20,7 +20,7 @@ class SchemaGrammarTest extends TestCase
         $conn->useDefaultSchemaGrammar();
         $grammar = $conn->getSchemaGrammar();
 
-        $this->assertInstanceOf('ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Grammars\PostgresGrammar', $grammar);
+        $this->assertInstanceOf('Bmstanley\LaravelNomad\Extension\Database\Schema\Grammars\PostgresGrammar', $grammar);
     }
 
     public function testSqliteConnectionSchemaGrammarIsOverridden()
@@ -29,7 +29,7 @@ class SchemaGrammarTest extends TestCase
         $conn->useDefaultSchemaGrammar();
         $grammar = $conn->getSchemaGrammar();
 
-        $this->assertInstanceOf('ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Grammars\SQLiteGrammar', $grammar);
+        $this->assertInstanceOf('Bmstanley\LaravelNomad\Extension\Database\Schema\Grammars\SQLiteGrammar', $grammar);
     }
 
     public function testSqlsrvConnectionSchemaGrammarIsOverridden()
@@ -38,7 +38,7 @@ class SchemaGrammarTest extends TestCase
         $conn->useDefaultSchemaGrammar();
         $grammar = $conn->getSchemaGrammar();
 
-        $this->assertInstanceOf('ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Grammars\SqlServerGrammar', $grammar);
+        $this->assertInstanceOf('Bmstanley\LaravelNomad\Extension\Database\Schema\Grammars\SqlServerGrammar', $grammar);
     }
 
     public function testMysqlPassthruColumnToSql()

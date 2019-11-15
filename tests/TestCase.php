@@ -6,8 +6,8 @@ use ReflectionMethod;
 use Illuminate\Database\Connection;
 use Illuminate\Foundation\Application;
 use Illuminate\Database\Schema\Builder;
-use ShiftOneLabs\LaravelNomad\FeatureDetection;
-use ShiftOneLabs\LaravelNomad\Tests\Stubs\PdoStub;
+use Bmstanley\LaravelNomad\FeatureDetection;
+use Bmstanley\LaravelNomad\Tests\Stubs\PdoStub;
 use Illuminate\Database\Connectors\ConnectionFactory;
 use Illuminate\Database\Schema\Blueprint as Blueprint;
 use Illuminate\Database\Schema\Grammars\Grammar as Grammar;
@@ -19,7 +19,7 @@ class TestCase extends BaseTestCase
     {
         $app = new Application();
         $app->register(\Illuminate\Database\DatabaseServiceProvider::class);
-        $app->register(\ShiftOneLabs\LaravelNomad\LaravelNomadServiceProvider::class);
+        $app->register(\Bmstanley\LaravelNomad\LaravelNomadServiceProvider::class);
 
         $this->detection = $app['nomad.feature.detection'];
 
@@ -40,7 +40,7 @@ class TestCase extends BaseTestCase
 
     public function getNewBlueprint($table = 'table')
     {
-        return new \ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Blueprint($table);
+        return new \Bmstanley\LaravelNomad\Extension\Database\Schema\Blueprint($table);
     }
 
     public function getBuilderBlueprint(Builder $builder, $table = 'table')

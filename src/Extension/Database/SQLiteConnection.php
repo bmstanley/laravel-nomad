@@ -3,8 +3,8 @@
 namespace Bmstanley\LaravelNomad\Extension\Database;
 
 use Illuminate\Database\SQLiteConnection as BaseSQLiteConnection;
-use ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Blueprint;
-use ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Grammars\SQLiteGrammar as SchemaGrammar;
+use Bmstanley\LaravelNomad\Extension\Database\Schema\Blueprint;
+use Bmstanley\LaravelNomad\Extension\Database\Schema\Grammars\SQLiteGrammar as SchemaGrammar;
 
 class SQLiteConnection extends BaseSQLiteConnection
 {
@@ -12,7 +12,7 @@ class SQLiteConnection extends BaseSQLiteConnection
     /**
      * Get the default schema grammar instance.
      *
-     * @return \ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Grammars\SQLiteGrammar
+     * @return \Bmstanley\LaravelNomad\Extension\Database\Schema\Grammars\SQLiteGrammar
      */
     protected function getDefaultSchemaGrammar()
     {

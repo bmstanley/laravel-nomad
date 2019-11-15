@@ -2,9 +2,9 @@
 
 namespace Bmstanley\LaravelNomad\Extension\Database;
 
-use ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Blueprint;
+use Bmstanley\LaravelNomad\Extension\Database\Schema\Blueprint;
 use Illuminate\Database\PostgresConnection as BasePostgresConnection;
-use ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Grammars\PostgresGrammar as SchemaGrammar;
+use Bmstanley\LaravelNomad\Extension\Database\Schema\Grammars\PostgresGrammar as SchemaGrammar;
 
 class PostgresConnection extends BasePostgresConnection
 {
@@ -12,7 +12,7 @@ class PostgresConnection extends BasePostgresConnection
     /**
      * Get the default schema grammar instance.
      *
-     * @return \ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Grammars\PostgresGrammar
+     * @return \Bmstanley\LaravelNomad\Extension\Database\Schema\Grammars\PostgresGrammar
      */
     protected function getDefaultSchemaGrammar()
     {
