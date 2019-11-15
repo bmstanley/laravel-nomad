@@ -1,6 +1,6 @@
 <?php
 
-namespace ShiftOneLabs\LaravelNomad\Tests;
+namespace Bmstanley\LaravelNomad\Tests;
 
 use PHPUnit_Framework_TestCase;
 use ShiftOneLabs\LaravelNomad\FeatureDetection;

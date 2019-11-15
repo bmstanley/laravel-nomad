@@ -1,6 +1,6 @@
 <?php
 
-namespace ShiftOneLabs\LaravelNomad\Tests;
+namespace Bmstanley\LaravelNomad\Tests;
 
 class SchemaGrammarTest extends TestCase
 {

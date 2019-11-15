@@ -1,6 +1,6 @@
 <?php
 
-namespace ShiftOneLabs\LaravelNomad;
+namespace Bmstanley\LaravelNomad;
 
 use LogicException;
 use Illuminate\Database\Connection;

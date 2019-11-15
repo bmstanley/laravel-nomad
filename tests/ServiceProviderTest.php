@@ -1,6 +1,6 @@
 <?php
 
-namespace ShiftOneLabs\LaravelNomad\Tests;
+namespace Bmstanley\LaravelNomad\Tests;
 
 use Illuminate\Database\Connection;
 use ShiftOneLabs\LaravelNomad\FeatureDetection;

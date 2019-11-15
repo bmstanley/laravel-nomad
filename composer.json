@@ -1,18 +1,22 @@
 {
-    "name": "shiftonelabs/laravel-nomad",
+    "name": "bmstanley/laravel-nomad",
     "description": "Add extra functionality to Laravel migrations.",
-    "keywords": ["laravel", "lumen", "migration", "custom"],
-    "homepage": "https://github.com/shiftonelabs/laravel-nomad",
+    "keywords": ["laravel", "migration", "custom"],
+    "homepage": "https://github.com/bmstanley/laravel-nomad",
     "license": "MIT",
     "authors": [
         {
             "name": "Patrick Carlo-Hickman",
             "email": "patrick@shiftonelabs.com"
+        },
+        {
+            "name": "Brian Stanley",
+            "email": "bmstanley87@gmail.com"
         }
     ],
     "support": {
-        "issues": "https://github.com/shiftonelabs/laravel-nomad/issues",
-        "source": "https://github.com/shiftonelabs/laravel-nomad"
+        "issues": "https://github.com/bmstanley/laravel-nomad/issues",
+        "source": "https://github.com/bmstanley/laravel-nomad"
     },
     "require": {
         "php": ">=7.0.0",
@@ -29,18 +33,18 @@
     },
     "autoload": {
         "psr-4": {
-            "ShiftOneLabs\\LaravelNomad\\": "src/"
+            "Bmstanley\\LaravelNomad\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ShiftOneLabs\\LaravelNomad\\Tests\\": "tests/"
+            "Bmstanley\\LaravelNomad\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "ShiftOneLabs\\LaravelNomad\\LaravelNomadServiceProvider"
+                "Bmstanley\\LaravelNomad\\LaravelNomadServiceProvider"
             ]
         }
     },

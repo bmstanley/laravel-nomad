@@ -1,6 +1,6 @@
 <?php
 
-namespace ShiftOneLabs\LaravelNomad\Extension\Database;
+namespace Bmstanley\LaravelNomad\Extension\Database;
 
 use ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Blueprint;
 use Illuminate\Database\PostgresConnection as BasePostgresConnection;

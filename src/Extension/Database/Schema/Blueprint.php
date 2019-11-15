@@ -1,6 +1,6 @@
 <?php
 
-namespace ShiftOneLabs\LaravelNomad\Extension\Database\Schema;
+namespace Bmstanley\LaravelNomad\Extension\Database\Schema;
 
 use Illuminate\Database\Schema\Blueprint as BaseBlueprint;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace ShiftOneLabs\LaravelNomad\Extension\Database;
+namespace Bmstanley\LaravelNomad\Extension\Database;
 
 use Illuminate\Database\SQLiteConnection as BaseSQLiteConnection;
 use ShiftOneLabs\LaravelNomad\Extension\Database\Schema\Blueprint;

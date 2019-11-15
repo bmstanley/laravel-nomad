@@ -1,6 +1,6 @@
 <?php
 
-namespace ShiftOneLabs\LaravelNomad\Traits\Database\Schema\Grammars;
+namespace Bmstanley\LaravelNomad\Traits\Database\Schema\Grammars;
 
 use Illuminate\Support\Fluent;
 
