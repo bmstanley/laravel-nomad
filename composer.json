@@ -15,16 +15,17 @@
         "source": "https://github.com/shiftonelabs/laravel-nomad"
     },
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/database": ">=4.1",
-        "illuminate/support": ">=4.1"
+        "php": ">=7.0.0",
+        "illuminate/database": "5.5.*"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.0",
+        "doctrine/dbal": "^2.5",
+        "phpunit/phpunit": "~6.0",
         "mockery/mockery": "~0.9",
-        "laravel/framework": ">=4.1",
-        "squizlabs/php_codesniffer": "2.*",
-        "shiftonelabs/codesniffer-standard": "0.*"
+        "fzaninotto/faker": "~1.5",
+        "squizlabs/php_codesniffer": "^2.6",
+        "orchestra/testbench": "3.5.*",
+        "orchestra/database": "3.5.*"
     },
     "autoload": {
         "psr-4": {
@@ -34,6 +35,13 @@
     "autoload-dev": {
         "psr-4": {
             "ShiftOneLabs\\LaravelNomad\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ShiftOneLabs\\LaravelNomad\\LaravelNomadServiceProvider"
+            ]
         }
     },
     "minimum-stability": "stable"
